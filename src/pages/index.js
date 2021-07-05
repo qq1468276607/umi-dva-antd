@@ -1,3 +1,8 @@
+/**
+ * title: 首页
+ * Routes:
+ *   - ./src/routes/PrivateRoute.js
+ */
 import React, { useState, useEffect } from 'react';
 import { Card } from 'antd';
 import styles from './index.less';
