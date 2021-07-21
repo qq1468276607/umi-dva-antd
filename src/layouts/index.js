@@ -12,6 +12,9 @@ function BasicLayout(props) {
   if (props.location.pathname === '/login') {
     return props.children;
   }
+  if(!localStorage.username) {
+    router.push('/login');
+  }
   return (
     <ConfigProvider locale={zhCN}>
       <Layout className="basic-layout" style={{ height: window.innerHeight }}>
