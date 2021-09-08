@@ -1,9 +1,10 @@
-import styles from './index.less';
+// import styles from './index.less';
 import Header from './header';
+import LeftMenu from './leftMenu'
 import { Layout, ConfigProvider, Spin  } from 'antd';
 import router from 'umi/router';
 import { connect } from 'dva';
-import enUS from 'antd/lib/locale/en_US';  // 英文
+// import enUS from 'antd/lib/locale/en_US';  // 英文
 import zhCN from 'antd/lib/locale/zh_CN';  // 中文
 
 const { Content } = Layout;
@@ -17,13 +18,18 @@ function BasicLayout(props) {
   }
   return (
     <ConfigProvider locale={zhCN}>
-      <Layout className="basic-layout" style={{ height: window.innerHeight }}>
-        <Spin tip="Loading..." spinning={props.loading}>
-          <Header />
-          <Content>
-            <div>{props.children}</div>
-          </Content>
-        </Spin>
+      <Layout className="basic-layout">
+        <div style={{ display: 'flex' }}>
+         <LeftMenu />
+         <div style={{ flex: '1' }}>
+          <Spin tip="Loading..." spinning={props.loading}>
+            <Header />
+            <Content>
+              <div style={{ height: window.innerHeight - 120, overflow: 'auto' }}>{props.children}</div>
+            </Content>
+          </Spin>
+        </div>
+        </div>
      </Layout>
     </ConfigProvider>
   );
