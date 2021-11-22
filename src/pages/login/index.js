@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import router from 'umi/router';
-import { Layout, Icon, Form, Input, Button, Message } from 'antd';
+import { Layout, Icon, Form, Input, Button } from 'antd';
 import { connect } from 'dva';
 import styles from './login.less';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 const Login =({ form, dispatch, loading }) => {
   console.log("loading", loading)

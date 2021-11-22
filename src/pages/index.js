@@ -3,7 +3,7 @@
  * Routes:
  *   - ./src/routes/PrivateRoute.js
  */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card } from 'antd';
 import styles from './index.less';
 import successIcon from '@/assets/exportSuccess.png';
@@ -43,7 +43,7 @@ const btmData = [
       <div className={styles.userDet}>
         <span>欢迎，XXX，祝你开心每一天！</span>&nbsp;&nbsp;{getTime()}&nbsp;&nbsp;{getDay()}
       </div>
-      <div className={styles.mianHome} style={{ height: window.innerHeight - 118 }}>
+      <div className={styles.mianHome} style={{ height: window.innerHeight - 180 }}>
         <div className={styles.left}>
           这里不知道放什么
         </div>
